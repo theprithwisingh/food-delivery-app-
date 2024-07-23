@@ -2,10 +2,10 @@ import './App.css'
 function App() {
 
   return (
-    <>
-     hello admin panel! 
-    </>
+    <div className='App'>
+       admin!
+    </div>
   )
 }
 
-export default App
+export default App;
