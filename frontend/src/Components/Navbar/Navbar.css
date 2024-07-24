@@ -14,7 +14,7 @@
     list-style:none;
     gap: 20px;
     color: #49557e;
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
 }
 .navbar-right{
@@ -25,7 +25,7 @@
 }
 .navbar button{
     background: transparent;
-    font-size: 16px;
+    font-size: 20px;
     color: #49557e;
     border: 1px solid tomato;
     padding: 10px 30px;
