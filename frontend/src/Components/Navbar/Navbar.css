@@ -6,6 +6,7 @@
 }
 .navbar .logo{
     width: 150px;
+    mix-blend-mode:;
 }
 
 .navbar-menu{
@@ -14,11 +15,13 @@
     gap: 20px;
     color: #49557e;
     font-size: 18px;
+    cursor: pointer;
 }
 .navbar-right{
     display: flex;
     align-items: center;
     gap: 40px;
+    cursor: pointer;
 }
 .navbar button{
     background: transparent;
@@ -31,4 +34,19 @@
 }
 .navbar button:hover{
     background:#fff;
+}
+.active{
+    border-bottom:2px solid tomato ;
+}
+.navbar-search-icon{
+ position:relative;
+}
+.navbar-search-icon .dot{
+    position: absolute;
+    min-width:10px;
+    min-height:10px;
+    background-color:tomato;
+    border-radius:5px;
+    top:-8px;
+    right:-8px;
 }
