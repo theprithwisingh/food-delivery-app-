@@ -112,4 +112,124 @@
       text-align: left;
     }
   }
-  
+  @media (min-width: 768px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .footer-content-left,
+    .footer-content-center,
+    .footer-content-right {
+        flex: 1;
+        text-align: left;
+    }
+
+    .footer-content-left img {
+        width: 200px;
+    }
+
+    .footer-social-icon img {
+        width: 50px;
+    }
+
+    .footer-content-center h2,
+    .footer-content-right h2 {
+        font-size: 22px;
+    }
+
+    .footer-content-center ul,
+    .footer-content-right ul {
+        padding: 0;
+    }
+
+    .footer-content-center li,
+    .footer-content-right li {
+        font-size: 16px;
+    }
+
+    .footer-copyright {
+        font-size: 14px;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .footer-content {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .footer-content-left,
+  .footer-content-center,
+  .footer-content-right {
+      flex: 1 1 auto;
+      text-align: center;
+  }
+
+  .footer-content-left img {
+      width: 175px;
+  }
+
+  .footer-social-icon img {
+      width: 45px;
+  }
+
+  .footer-content-center h2,
+  .footer-content-right h2 {
+      font-size: 20px;
+  }
+
+  .footer-content-center ul,
+  .footer-content-right ul {
+      padding: 0 20px;
+  }
+
+  .footer-content-center li,
+  .footer-content-right li {
+      font-size: 15px;
+  }
+
+  .footer-copyright {
+      font-size: 13px;
+  }
+}
+@media (max-width: 575px) {
+  .footer-content {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .footer-content-left,
+  .footer-content-center,
+  .footer-content-right {
+      flex: 1 1 auto;
+      text-align: center;
+  }
+
+  .footer-content-left img {
+      width: 150px;
+  }
+
+  .footer-social-icon img {
+      width: 40px;
+  }
+
+  .footer-content-center h2,
+  .footer-content-right h2 {
+      font-size: 18px;
+  }
+
+  .footer-content-center ul,
+  .footer-content-right ul {
+      padding: 0 10px;
+  }
+
+  .footer-content-center li,
+  .footer-content-right li {
+      font-size: 14px;
+  }
+
+  .footer-copyright {
+      font-size: 12px;
+  }
+}
