@@ -2,7 +2,7 @@
   "name": "backend",
   "version": "1.0.0",
   "main": "server.mjs",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "server": "nodemon server.js"
   },
