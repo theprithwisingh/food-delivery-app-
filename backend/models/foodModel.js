@@ -1,4 +1,4 @@
-import mongoose, { Types } from "mongoose";
+import mongoose from "mongoose";
 
 const foodScheme = new mongoose.Schema({
     name:{type:String,required:true},
@@ -7,6 +7,6 @@ const foodScheme = new mongoose.Schema({
     image:{type:String,required:true},
     category:{type:String,required:true}
 })
-const foodModel = mongoose.models.food ||mongoose.model("food",foodScheme);
+const foodModel = mongoose.models.food || mongoose.model("food",foodScheme);
 
 export default foodModel;
