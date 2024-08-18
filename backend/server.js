@@ -5,7 +5,7 @@ import foodRouter from "./routes/foodRoute.js";
 
 //Initialize Express app and set the port number
 const app = express();
-const port = 4001;
+const port = 4002;
 
 //Middleware to parse JSON and enable CORS for cross-origin requests
 app.use(express.json());
@@ -26,3 +26,4 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
    console.log(`Server started on http://localhost:${port}`);
 });
+
