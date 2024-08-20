@@ -5,10 +5,11 @@ import foodRouter from "./routes/foodRoute.js";
 
 //Initialize Express app and set the port number
 const app = express();
-const port = 4002;
+const port = 4005;
 
 //Middleware to parse JSON and enable CORS for cross-origin requests
-app.use(express.json());
+// app.use(express.json());
+app.use(express.json()); // To parse JSON bodies
 app.use(cors());
 
 //Connect to the database
@@ -19,11 +20,10 @@ app.use("/api/food", foodRouter);
 
 //Root endpoint to verify if the API is working
 app.get("/", (req, res) => {
-   res.send("API Working");
+   res.send("API i m Working");
 });
 
 //Start the server and listen on the specified port
 app.listen(port, () => {
    console.log(`Server started on http://localhost:${port}`);
 });
-
