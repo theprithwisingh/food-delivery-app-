@@ -11,3 +11,4 @@ export const connectDB = async () => {
     console.error("DB Connection Error:", error);
   }
 };
+
