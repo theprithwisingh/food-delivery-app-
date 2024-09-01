@@ -3,7 +3,7 @@ width: 18%;
 min-height: 100vh;
 border: 1.5px solid #a9a9a9;
 border-top: 0;
-color: black;
+
 }
 
 .sidebar-options{
@@ -22,6 +22,10 @@ color: black;
     padding: 8px 10px;
     border-radius:3px 0px 0px 3px;
     cursor: pointer;
+}
+.sidebar-option.active{
+    background-color: #fff0ed;
+    border-color:tomato;
 }
 @media (max-width:900px) {
     .sidebar-option p{

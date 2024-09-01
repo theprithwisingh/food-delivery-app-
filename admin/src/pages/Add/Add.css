@@ -1,0 +1,126 @@
+
+.add {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Image Upload Styles */
+.add-img-upload {
+    align-items: center;
+    text-align: center;
+}
+
+.add-img-upload p {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.add-img-upload label {
+    cursor: pointer;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.add-img-upload img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px dashed #ccc;
+    transition: border-color 0.3s ease;
+}
+
+.add-img-upload img:hover {
+    border-color: #333;
+}
+
+/* Input Fields Styles */
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #333;
+    outline: none;
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resize only */
+}
+
+/* Product Name and Description Styles */
+/* .flex-col {
+    display: flex;
+    flex-direction: column;
+} */
+
+.add-product-name p,
+.add-product-description p,
+.add-category p,
+.add-price p {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Category and Price Section */
+.add-category-price {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.add-category,
+.add-price {
+    flex: 1;
+}
+
+/* Button Styles */
+.add-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+    background-color: #45a049;
+}
+
+.add-btn:active {
+    background-color: #3e8e41;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .add-category-price {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
