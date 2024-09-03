@@ -3,7 +3,7 @@ import axios from 'axios';
 import './Add.css'
 import { assets } from '../../assets/assets';
 const Add = () => {
-  const url = "http://localhost:4001"
+  const url = "http://localhost:4000"
   const[image,setImage] = useState(false);
   const[data,setData] = useState({
     name:"",
@@ -18,25 +18,52 @@ const Add = () => {
   };
   // useEffect(()=>{console.log(data)},[data])
 
-  const onSubmitHandler = async (event)=>{
-   event.preventDefault();
-   const formData = new FormData();
-   formData.append("name",data.name)
-   formData.append("description",data.description)
-   formData.append("price",data.price)
-   formData.append("category",data.category)
-   formData.append("image",data.image)
-     const responce = await axios.post(`${url}/api/food/add`,formData);
-     if (responce.data.success){
-      setData({
-        name:"",
-        description:"",
-        price:"",
-        category:"Salad"
-      })
-      setImage(false);
-     }
+  // const onSubmitHandler = async (event)=>{
+  //  event.preventDefault();
+  //  const formData = new FormData();
+  //  formData.append("name",data.name)
+  //  formData.append("description",data.description)
+  //  formData.append("price",data.price)
+  //  formData.append("category",data.category)
+  //  formData.append("image",image)
+  //    const responce = await axios.post(`${url}/api/food/add`,formData);
+  //    if (responce.data.success){
+  //     setData({
+  //       name:"",
+  //       description:"",
+  //       price:"",
+  //       category:"Salad"
+  //     })
+  //     setImage(false);
+  //    }
+  // };
+
+  const onSubmitHandler = async (event) => {
+    event.preventDefault();
+    const formData = new FormData();
+    formData.append("name", data.name);
+    formData.append("description", data.description);
+    formData.append("price", data.price);
+    formData.append("category", data.category);
+    formData.append("image", image);
+  
+    try {
+      const response = await axios.post(`${url}/api/food/add`, formData);
+      if (response.data.success) {
+        setData({
+          name: "",
+          description: "",
+          price: "",
+          category: "Salad",
+        });
+        setImage(null);
+      }
+    } catch (error) {
+      console.error("Error submitting the form:", error);
+      alert("There was a problem connecting to the server. Please try again later.");
+    }
   };
+  
   return (
     <div className='add'>
       <form onSubmit={onSubmitHandler}>
