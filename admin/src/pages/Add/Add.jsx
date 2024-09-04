@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import axios from 'axios';
 import './Add.css'
 import { assets } from '../../assets/assets';
+import { toast } from 'react-toastify';
 const Add = () => {
+  const notify = () => toast("Wow so easy!");
   const url = "http://localhost:4000"
   const[image,setImage] = useState(false);
   const[data,setData] = useState({
@@ -57,6 +59,7 @@ const Add = () => {
           category: "Salad",
         });
         setImage(null);
+        toast.success("Food added!");
       }
     } catch (error) {
       console.error("Error submitting the form:", error);
