@@ -19,27 +19,6 @@ const Add = () => {
     setData(data=>({...data,[name]:value}));
   };
   // useEffect(()=>{console.log(data)},[data])
-
-  // const onSubmitHandler = async (event)=>{
-  //  event.preventDefault();
-  //  const formData = new FormData();
-  //  formData.append("name",data.name)
-  //  formData.append("description",data.description)
-  //  formData.append("price",data.price)
-  //  formData.append("category",data.category)
-  //  formData.append("image",image)
-  //    const responce = await axios.post(`${url}/api/food/add`,formData);
-  //    if (responce.data.success){
-  //     setData({
-  //       name:"",
-  //       description:"",
-  //       price:"",
-  //       category:"Salad"
-  //     })
-  //     setImage(false);
-  //    }
-  // };
-
   const onSubmitHandler = async (event) => {
     event.preventDefault();
     const formData = new FormData();
@@ -49,8 +28,10 @@ const Add = () => {
     formData.append("category", data.category);
     formData.append("image", image);
   
-    try {
+    
       const response = await axios.post(`${url}/api/food/add`, formData);
+      // const isFoodAdded = response.data.success;  // Define this variable based on API response
+  
       if (response.data.success) {
         setData({
           name: "",
@@ -61,11 +42,11 @@ const Add = () => {
         setImage(null);
         toast.success("Food added!");
       }
-    } catch (error) {
-      console.error("Error submitting the form:", error);
-      alert("There was a problem connecting to the server. Please try again later.");
-    }
+      else{
+        toast.error("Failed to add food!");
+      }
   };
+  
   
   return (
     <div className='add'>
