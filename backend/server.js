@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import { connectDB } from "./config/db.js";
 import foodRouter from "./routes/foodRoute.js";
+import userRouter from "./routes/userRoute.js";
 
 //Initialize Express app and set the port number
 const app = express();
@@ -18,6 +19,7 @@ connectDB();
 //Set up the API route for food-related operations
 app.use("/api/food", foodRouter);
 app.use("/images", express.static('uploads'))
+app.use("api/user/",userRouter)
 
 //Root endpoint to verify if the API is working
 app.get("/", (req, res) => {
