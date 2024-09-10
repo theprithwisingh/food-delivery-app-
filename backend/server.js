@@ -4,9 +4,10 @@ import { connectDB } from "./config/db.js";
 import foodRouter from "./routes/foodRoute.js";
 import userRouter from "./routes/userRoute.js";
 import 'dotenv/config';
+import cartRouter from "./routes/cartRoute.js";
 //Initialize Express app and set the port number
 const app = express();
-const port = 4001;
+const port = 4002;
 
 //Middleware to parse JSON and enable CORS for cross-origin requests
 // app.use(express.json());
@@ -20,11 +21,12 @@ connectDB();
 app.use("/api/food", foodRouter);
 app.use("/images", express.static('uploads'))
 app.use("api/user/",userRouter)
+app.use("api/cart",cartRouter)
 
 //Root endpoint to verify if the API is working
 app.get("/", (req, res) => {
    res.send("API i m Working");
-});+
+});
 
 //Start the server and listen on the specified port
 app.listen(port, () => {

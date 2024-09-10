@@ -4,7 +4,7 @@ import './Add.css'
 import { assets } from '../../assets/assets';
 import { toast } from 'react-toastify';
 const Add = ({url}) => {
-  const notify = () => toast("Wow so easy!");
+  // const notify = () => toast("Wow so easy!");
   // const url = "http://localhost:4000"
   const[image,setImage] = useState(false);
   const[data,setData] = useState({
@@ -45,7 +45,7 @@ const Add = ({url}) => {
       else{
         toast.error("Failed to add food!");
       }
-  };
+  }
   
   
   return (
