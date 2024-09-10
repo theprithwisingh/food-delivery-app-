@@ -14,7 +14,7 @@ const orderScheme = new mongoose.Schema({
         required:true
     },
     address:{
-        type:String,
+        type:Object,
         required:true
     },
     status:{
@@ -30,8 +30,8 @@ const orderScheme = new mongoose.Schema({
         default:false
     }
 })
-const ordermodel = mongoose.models.order || mongoose.model("Food",orderScheme);
+const orderModel = mongoose.models.order || mongoose.model("order",orderScheme);
 
-export default ordermodel;
+export default orderModel;
 
 /**/
