@@ -5,6 +5,8 @@ import foodRouter from "./routes/foodRoute.js";
 import userRouter from "./routes/userRoute.js";
 import 'dotenv/config';
 import cartRouter from "./routes/cartRoute.js";
+import { placeOrder } from "./controllers/orderController.js";
+import orderRouter from "./routes/orderRoute.js";
 //Initialize Express app and set the port number
 const app = express();
 const port = 4002;
@@ -22,6 +24,7 @@ app.use("/api/food", foodRouter);
 app.use("/images", express.static('uploads'))
 app.use("api/user/",userRouter)
 app.use("api/cart",cartRouter)
+app.use("api/order",orderRouter)
 
 //Root endpoint to verify if the API is working
 app.get("/", (req, res) => {
