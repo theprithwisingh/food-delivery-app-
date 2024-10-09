@@ -1,4 +1,7 @@
 ﻿# food-delivery-app
+#cliend side https://food-delivery-app-rust-delta.vercel.app/
+#admin panel https://food-delivery-app-696s.vercel.app/
+
 **Welcome to the Food Delivery Full Stack Website! This project is a comprehensive solution for managing food delivery services, built using the MERN stack (MongoDB, Express.js, React, and Node.js). It allows users to browse menus, place orders, and track deliveries in real-time.**
 
 **Features**
